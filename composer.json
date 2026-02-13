@@ -55,7 +55,7 @@
             "@php artisan config:clear --ansi",
             "@php artisan test"
         ],
-        "docs": "php artisan scribe:generate --no-interaction",
+        "docs": "php artisan l5-swagger:generate",
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
