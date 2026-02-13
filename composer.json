@@ -57,6 +57,7 @@
             "@php artisan test"
         ],
         "docs": "php artisan l5-swagger:generate",
+        "docs-all": "php artisan l5-swagger:generate --all",
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
