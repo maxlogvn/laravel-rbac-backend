@@ -19,14 +19,18 @@ class ProtectedController extends Controller
      *     description="Requires valid JWT token",
      *     tags={"Protected"},
      *     security={{"bearerAuth":{}}},
+     *
      *     @OA\Response(
      *         response=200,
      *         description="Successful response",
+     *
      *         @OA\JsonContent(
+     *
      *             @OA\Property(property="message", type="string"),
      *             @OA\Property(property="user_id", type="integer")
      *         )
      *     ),
+     *
      *     @OA\Response(
      *         response=401,
      *         description="Unauthenticated"
