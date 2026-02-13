@@ -214,6 +214,12 @@ return [
                     'name' => 'Authorization', // The name of the header or query parameter to be used.
                     'in' => 'header', // The location of the API key. Valid values are "query" or "header".
                 ],
+                'bearerAuth' => [ // JWT Bearer token authentication
+                    'type' => 'http',
+                    'scheme' => 'bearer',
+                    'bearerFormat' => 'JWT',
+                    'description' => 'Enter JWT token in format: Bearer {token}',
+                ],
                 */
             ],
             'security' => [
@@ -230,6 +236,11 @@ return [
                     'passport' => []
                     */
                 ],
+
+                /*
+                 * Default security for all endpoints using JWT bearer auth
+                 */
+                'bearerAuth' => [],
             ],
         ],
 

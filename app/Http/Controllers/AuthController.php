@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 use Tymon\JWTAuth\Facades\JWTAuth;
 
 /**
+ * @OA\Info(
+ *     title="Laravel RBAC API",
+ *     version="1.0.0",
+ *     description="Role-Based Access Control API with JWT authentication"
+ * )
+ *
  * @OA\Tag(
  *     name="Authentication",
  *     description="API authentication endpoints"
