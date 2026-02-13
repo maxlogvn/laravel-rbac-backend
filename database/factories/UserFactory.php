@@ -41,4 +41,34 @@ class UserFactory extends Factory
             'email_verified_at' => null,
         ]);
     }
+
+    /**
+     * Indicate that the user should have admin role.
+     */
+    public function admin(): static
+    {
+        return $this->afterCreating(function (\App\Models\User $user) {
+            $user->assignRole('admin');
+        });
+    }
+
+    /**
+     * Indicate that the user should have moderator role.
+     */
+    public function moderator(): static
+    {
+        return $this->afterCreating(function (\App\Models\User $user) {
+            $user->assignRole('moderator');
+        });
+    }
+
+    /**
+     * Indicate that the user should have member role.
+     */
+    public function member(): static
+    {
+        return $this->afterCreating(function (\App\Models\User $user) {
+            $user->assignRole('member');
+        });
+    }
 }
