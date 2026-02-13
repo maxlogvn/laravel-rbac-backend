@@ -112,6 +112,8 @@ class ModeratorController extends Controller
             'lock_reason' => $request->reason,
         ]);
 
+        $user->refresh();
+
         return response()->json([
             'message' => 'User locked successfully',
             'user' => [
@@ -178,6 +180,8 @@ class ModeratorController extends Controller
             'locked_at' => null,
             'lock_reason' => null,
         ]);
+
+        $user->refresh();
 
         return response()->json([
             'message' => 'User unlocked successfully',
